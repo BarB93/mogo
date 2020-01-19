@@ -139,37 +139,15 @@ $(function() {
      /*Reviews(slider)*/
     
     // section--grey
-    $(".section--grey .reviews__btn--next").click(function(event){
-        event.preventDefault();
-        event.stopPropagation();
+    $(".slick").slick({
+        arrows:true,
 
-        console.log($(".section--grey .reviews__item").last().index());
-
-        var $currentReviewsItem = $(".section--grey .reviews__item--show"),
-            $firstReviewsItem = $(".section--grey .reviews__item").first(),
-            $lastReviewsItem = $(".section--grey .reviews__item").last();
-            $nextReviewsItem = "";
-
-         var currentIndex = $currentReviewsItem.index(),
-             firstIndex = $firstReviewsItem.index(),
-             lastIndex = $lastReviewsItem.index();
-             nextIndex = currentIndex + 1;
+    });
 
 
-            if(nextIndex == lastIndex + 1) {
-                $nextReviewsItem = $firstReviewsItem;
-            }else {
-                $nextReviewsItem = $(".section--grey .reviews__item").eq(nextIndex);
-            }
-
-
-            $currentReviewsItem.removeClass('reviews__item--show');
-            $nextReviewsItem.addClass('reviews__item--show');
-    }); 
-        
-
+    // section--rev
  
-    
+    // $(".section--rev .reviews").slick();
 
 
 

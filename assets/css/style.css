@@ -281,52 +281,8 @@ h6 {
 
 }
 
-/*Slider*/
 
-.slider {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    padding: 0 15px;
-}
 
-.slider__inner {
-    display: flex;
-    justify-content: space-between;
-}
-
-.slider__item {
-    width: 23%;
-    padding: 20px 0;
-    position: relative;
-    border-top: 3px solid #fff;
-    opacity: 0.5;
-    font-size: 18px;
-    color: #fff;
-    text-align: left;
-    text-transform: uppercase;
-}
-
-.slider__item.active {
-    opacity: 1;
-}
-
-.slider__item.active:before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    height: 3px;
-    width: 50%;
-    background: #f38181;
-    top: -3px;
-}
-
-.slider__number {
-    font-weight: bold;
-    font-size: 24px;
-}
 
 
 /*Section*/
@@ -402,6 +358,56 @@ h6 {
     background-size: cover;
     padding: 55px 0;
 }
+
+/
+/*Slider*/
+
+.slider {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    padding: 0 15px;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 23%;
+    padding: 20px 0;
+    position: relative;
+    border-top: 3px solid #fff;
+    opacity: 0.5;
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.slider__item.active {
+    opacity: 1;
+}
+
+.slider__item.active:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #f38181;
+    top: -3px;
+}
+
+.slider__number {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
 
 
 /*Card*/
@@ -692,31 +698,73 @@ h6 {
 }
 
 
+/*slick*/
+.slick {
+    width: 100%;
+    padding: 20px 30px;
+    overflow: hidden;
+}
+
+
+.slick-track {
+    display: flex;
+}
+
+.slick-arrow{
+    position: absolute;
+    font-size: 0;
+    color:transparent;
+    border: 0;
+    border-top:;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+    background: transparent;
+
+    top:45%;
+
+    z-index: 10;
+}
+
+.slick-next{
+    right: 5px;
+    transform: rotate(45deg);
+}
+
+
+.slick-prev {
+    left: 5px;
+    transform: rotate(-135deg);
+}
+
+
+
+
 /*Reviews*/
 
 .reviews {
-    padding: 20px 110px 20px 315px;
+    width: 100%;
     position: relative;
-    max-height: 300px;
+   
 }
 
 .reviews__item {
-    display:none;
-    opacity: 0;
-    transition:opacity 2s linear;
+    position: relative;
+    margin:0 30px;
+
 }
 
 
 
-
-.reviews__item--show {
-    display:block;
-    opacity: 1;
-}
 
 .reviews__comment {
+
     text-align: left;
+    margin-left: 250px;
+    
 }
+
 .reviews__text {
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
@@ -733,11 +781,12 @@ h6 {
     position: absolute;
     width: 210px;
     height: 210px;
-    left: 70px;
+    left: 0px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
     display: block;
+
 
 }
 
@@ -768,22 +817,10 @@ h6 {
     font-size: 0;
     color: transparent;
 }
-.reviews__btn:after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-top: 3px solid #ccc;
-    border-right: 3px solid #ccc;
-}
-.reviews__btn--prev {
-    left: 20px;
-    transform: rotate(-135deg);
-}
-.reviews__btn--next {
-    right: 20px;
-    transform: rotate(45deg);
-}
+
+
+
+
 
 /*Social*/
 .social {
@@ -842,6 +879,7 @@ h6 {
     display: block;
     transition: opacity .2s linear;
     max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .works__title {
@@ -997,6 +1035,12 @@ h6 {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.map__title a:hover {
+    text-decoration: underline;
+}
+
+
 .map__title:after {
     content: "";
     display: block;
@@ -1005,6 +1049,8 @@ h6 {
     margin: 22px auto;
     background: #f38181;
 }
+
+
 .map__icon {
     font-size: 24px;
 }
@@ -1440,11 +1486,7 @@ h6 {
     }
 
 
-    /*Slider*/
-
-    .slider__text {
-        display: none;
-    }
+    
     /*Section*/
 
     .section {
@@ -1713,6 +1755,12 @@ h6 {
     .reviews {
         padding: 0;
     }
+
+    /*slick*/
+    .slick-arrow {
+        top:20%;
+    }
+
     /*logo*/
 
     .logo {
